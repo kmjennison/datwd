@@ -12,4 +12,19 @@ module.exports = {
   rules: {
     'prettier/prettier': 'error',
   },
+  overrides: [
+    // Set Jest rules only for test files.
+    {
+      files: ['**/*.test.js', '**/__mocks__/**/*.js'],
+      extends: ['plugin:jest/recommended'],
+      env: {
+        jest: true,
+      },
+      plugins: ['jest'],
+      rules: {
+        'global-require': 0,
+        'react/jsx-props-no-spreading': 0,
+      },
+    },
+  ],
 }
