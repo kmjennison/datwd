@@ -1,6 +1,6 @@
 {
   "name": "datwd",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Get all Node dependencies required by a subset of top-level dependencies",
   "main": "src/index.js",
   "files": [
