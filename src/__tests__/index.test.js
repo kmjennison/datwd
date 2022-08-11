@@ -82,4 +82,14 @@ describe('index.js', () => {
     const datwd = require('../index')
     expect(datwd(['this-does-not-exist'])).toEqual([])
   })
+
+  it('works with a single package string rather than array', () => {
+    const datwd = require('../index')
+    expect(datwd('cookies')).toEqual(['cookies', 'depd', 'keygrip', 'tsscmp'])
+  })
+
+  it('does not include a package that is a substring of an inputted filter package', () => {
+    const datwd = require('../index')
+    expect(datwd('cookiesthing')).toEqual([]) // should not match "cookies"
+  })
 })

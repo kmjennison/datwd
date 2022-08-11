@@ -12,7 +12,11 @@ const { execSync } = require('child_process')
  *   dependencies will be excluded.
  * @return {String[]} An array of module names
  */
-const getAllDependencies = (moduleFilter = []) => {
+const getAllDependencies = (moduleFilterInput = []) => {
+  const moduleFilter = Array.isArray(moduleFilterInput)
+    ? moduleFilterInput
+    : [moduleFilterInput]
+
   // Get the full dependency tree using NPM, excluding dev dependencies
   // and peer dependencies.
   const dependencyTree = JSON.parse(execSync('npm ls --prod --json').toString())
