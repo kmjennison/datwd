@@ -1,2 +1,2 @@
-# datwd
-Get all Node dependencies (all the way down) required by a subset of top-level dependencies
+# Dependencies All the Way Down 🐢🐢🐢🐢🌀
+Get a list of all Node dependencies (and subdependencies) required by a subset of top-level dependencies
