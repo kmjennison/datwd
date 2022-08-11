@@ -1,0 +1,9 @@
+{
+  "name": "datwd",
+  "version": "1.0.0",
+  "description": "Get all Node dependencies required by a subset of top-level dependencies",
+  "main": "index.js",
+  "repository": "git@github.com:kmjennison/datwd.git",
+  "author": "Kevin Jennison",
+  "license": "MIT"
+}
