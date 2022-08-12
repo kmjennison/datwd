@@ -1,6 +1,8 @@
-# Dependencies All the Way Down 🐢🐢🐢🐢🐢🐢🐢🐢🐢🌀
+# Dependencies All the Way Down
 
-Easily get a list of all Node subdependencies for your top-level dependencies
+Easily get a list of all Node subdependencies for your top-level dependencies.
+
+🐢🐢🐢🐢🐢🐢🐢🐢🐢🐢🐢🐢🐢🐢🐢🐢🐢🐢🐢🐢🐢🐢🐢🐢🐢🐢🐢🐢🐢🐢🌀...
 
 ## Get Started
 
