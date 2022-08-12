@@ -15,11 +15,21 @@ Make sure the `npm` CLI is available and your dependencies are all installed. Th
 ```js
 const getDependencies = require('datwd')
 const allDeps = getDependencies(['some-package', '@another/package'])
+
+// For example:
+// [
+//   'some-package',
+//   'dep1-for-some-package',
+//   'dep2-for-some-package',
+//   '@another/package',
+//   '@another/supporting-package',
+// ]
+console.log(allDeps)
 ```
 
 ## Why?
 
-#### `webpack-node-externals`
+#### For use with `webpack-node-externals`
 
 The primary use case this was built for was to support easier configuration for [`webpack-node-externals`](https://github.com/liady/webpack-node-externals). The `allowList` property in `nodeExternals` will whitelist *top-level* Node dependencies but will ignore subdependencies down the tree (see: [Stack Overflow question](https://stackoverflow.com/q/45763620/1332513), [`webpack-node-externals` issue #72](https://github.com/liady/webpack-node-externals/issues/72). Consequently, by default, your package might ship with missing subdependencies you depend on.
 
@@ -48,4 +58,4 @@ In many cases, you likely don't want to use DATWD. Instead, rely on the dependen
 
 #### Other use cases?
 
-Please open a discussion if you've found DATWD useful in other situations!
+If you've found DATWD useful in other situations, please open a discussion to share.
