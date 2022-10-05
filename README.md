@@ -31,7 +31,7 @@ console.log(allDeps)
 
 #### For use with `webpack-node-externals`
 
-The primary use case this was built for was to support easier configuration for [`webpack-node-externals`](https://github.com/liady/webpack-node-externals). The `allowList` property in `nodeExternals` will whitelist *top-level* Node dependencies but will ignore subdependencies down the tree (see: [Stack Overflow question](https://stackoverflow.com/q/45763620/1332513), [`webpack-node-externals` issue #72](https://github.com/liady/webpack-node-externals/issues/72). Consequently, by default, your package might ship with missing subdependencies you depend on.
+The primary use case this was built for was to support easier configuration for [`webpack-node-externals`](https://github.com/liady/webpack-node-externals). The `allowList` property in `nodeExternals` will whitelist *top-level* Node dependencies but will ignore subdependencies down the tree (see: [Stack Overflow question](https://stackoverflow.com/q/45763620/1332513), [`webpack-node-externals` issue #72](https://github.com/liady/webpack-node-externals/issues/72)). Consequently, by default, your package might ship with missing subdependencies you depend on.
 
 Rather than manually whitelist dependencies and subdependencies (and sub-subdependencies...), use DATWD:
 
