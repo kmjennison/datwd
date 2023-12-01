@@ -19,7 +19,7 @@ const getAllDependencies = (moduleFilterInput = []) => {
 
   // Get the full dependency tree using NPM, excluding dev dependencies
   // and peer dependencies.
-  const dependencyTree = JSON.parse(execSync('npm ls --prod --json').toString())
+  const dependencyTree = JSON.parse(execSync('npm ls --all --omit=dev --json').toString())
 
   // Only get dependencies for specific top-level modules, if specified.
   const dependencyTreeFiltered = moduleFilter.length
